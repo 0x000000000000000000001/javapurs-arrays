@@ -1,0 +1,19 @@
+public class Effect_Exception {
+    public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
+        public Object apply(Object arg) { return this; }
+    };
+    public static Object catchException = FFI_STUB;
+    public static Object error = FFI_STUB;
+    public static Object errorWithCause = FFI_STUB;
+    public static Object errorWithName = FFI_STUB;
+    public static Object message = FFI_STUB;
+    public static Object name = FFI_STUB;
+    public static Object showErrorImpl = FFI_STUB;
+    public static Object stackImpl = FFI_STUB;
+    public static Object throwException = FFI_STUB;
+
+public static final Object $try = (java.util.function.Function<Object, Object>) (action_0) -> ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (Effect_Exception.catchException)).apply((java.util.function.Function<Object, Object>) (x_1) -> ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) Effect.applicativeEffect).get("pure"))).apply(new Data_Either.Left(x_1))))).apply(((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) Effect.functorEffect).get("map"))).apply(Data_Either.Right))).apply(action_0));
+public static final Object $throw = (java.util.function.Function<Object, Object>) (x_0) -> ((java.util.function.Function<Object, Object>) (Effect_Exception.throwException)).apply(((java.util.function.Function<Object, Object>) (Effect_Exception.error)).apply(x_0));
+public static final Object stack = ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (Effect_Exception.stackImpl)).apply(Data_Maybe.Just))).apply(new Data_Maybe.Nothing());
+public static final Object showError = new java.util.LinkedHashMap<String, Object>() {{ put("show", Effect_Exception.showErrorImpl); }};
+}
