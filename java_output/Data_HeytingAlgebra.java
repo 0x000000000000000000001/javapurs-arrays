@@ -3,8 +3,11 @@ public class Data_HeytingAlgebra {
         public Object apply(Object arg) { return this; }
     };
     public static Object boolConj = FFI_STUB;
+    public static Object boolConj(Object... args) { return null; }
     public static Object boolDisj = FFI_STUB;
+    public static Object boolDisj(Object... args) { return null; }
     public static Object boolNot = FFI_STUB;
+    public static Object boolNot(Object... args) { return null; }
 
 public static final Object ttRecord = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("ttRecord");
 public static final Object tt = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("tt");

@@ -3,11 +3,17 @@ public class Effect {
         public Object apply(Object arg) { return this; }
     };
     public static Object bindE = FFI_STUB;
+    public static Object bindE(Object... args) { return null; }
     public static Object forE = FFI_STUB;
+    public static Object forE(Object... args) { return null; }
     public static Object foreachE = FFI_STUB;
+    public static Object foreachE(Object... args) { return null; }
     public static Object pureE = FFI_STUB;
+    public static Object pureE(Object... args) { return null; }
     public static Object untilE = FFI_STUB;
+    public static Object untilE(Object... args) { return null; }
     public static Object whileE = FFI_STUB;
+    public static Object whileE(Object... args) { return null; }
 
 public static final Object monadEffect = new java.util.LinkedHashMap<String, Object>() {{ put("Applicative0", (java.util.function.Function<Object, Object>) (_dollar__unused_0) -> Effect.applicativeEffect); put("Bind1", (java.util.function.Function<Object, Object>) (_dollar__unused_0) -> Effect.bindEffect); }};
 public static final Object bindEffect = new java.util.LinkedHashMap<String, Object>() {{ put("bind", (java.util.function.Function<Object, Object>) (a) -> (java.util.function.Function<Object, Object>) (f) -> (java.util.function.Supplier<Object>) () -> { return ((java.util.function.Supplier<Object>) ((java.util.function.Function<Object, Object>) f).apply(((java.util.function.Supplier<Object>) a).get())).get(); }); put("Apply0", (java.util.function.Function<Object, Object>) (_dollar__unused_0) -> Effect.applyEffect); }};

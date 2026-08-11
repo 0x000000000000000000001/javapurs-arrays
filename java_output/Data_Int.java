@@ -3,12 +3,19 @@ public class Data_Int {
         public Object apply(Object arg) { return this; }
     };
     public static Object fromNumberImpl = FFI_STUB;
+    public static Object fromNumberImpl(Object... args) { return null; }
     public static Object fromStringAsImpl = FFI_STUB;
+    public static Object fromStringAsImpl(Object... args) { return null; }
     public static Object pow = FFI_STUB;
+    public static Object pow(Object... args) { return null; }
     public static Object quot = FFI_STUB;
+    public static Object quot(Object... args) { return null; }
     public static Object rem = FFI_STUB;
+    public static Object rem(Object... args) { return null; }
     public static Object toNumber = FFI_STUB;
+    public static Object toNumber(Object... args) { return null; }
     public static Object toStringAs = FFI_STUB;
+    public static Object toStringAs(Object... args) { return null; }
 
 public static final class Even {
             

@@ -3,6 +3,7 @@ public class Control_Apply {
         public Object apply(Object arg) { return this; }
     };
     public static Object arrayApply = FFI_STUB;
+    public static Object arrayApply(Object... args) { return null; }
 
 public static final Object identity = (java.util.function.Function<Object, Object>) (x_0) -> x_0;
 public static final Object applyProxy = new java.util.LinkedHashMap<String, Object>() {{ put("apply", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> new Type_Proxy.Proxy()); put("Functor0", (java.util.function.Function<Object, Object>) (_dollar__unused_0) -> Data_Functor.functorProxy); }};

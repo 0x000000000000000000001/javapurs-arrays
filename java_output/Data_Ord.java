@@ -3,11 +3,17 @@ public class Data_Ord {
         public Object apply(Object arg) { return this; }
     };
     public static Object ordArrayImpl = FFI_STUB;
+    public static Object ordArrayImpl(Object... args) { return null; }
     public static Object ordBooleanImpl = FFI_STUB;
+    public static Object ordBooleanImpl(Object... args) { return null; }
     public static Object ordCharImpl = FFI_STUB;
+    public static Object ordCharImpl(Object... args) { return null; }
     public static Object ordIntImpl = FFI_STUB;
+    public static Object ordIntImpl(Object... args) { return null; }
     public static Object ordNumberImpl = FFI_STUB;
+    public static Object ordNumberImpl(Object... args) { return null; }
     public static Object ordStringImpl = FFI_STUB;
+    public static Object ordStringImpl(Object... args) { return null; }
 
 public static final Object ordVoid = new java.util.LinkedHashMap<String, Object>() {{ put("compare", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> new Data_Ordering.EQ()); put("Eq0", (java.util.function.Function<Object, Object>) (_dollar__unused_0) -> Data_Eq.eqVoid); }};
 public static final Object ordUnit = new java.util.LinkedHashMap<String, Object>() {{ put("compare", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> new Data_Ordering.EQ()); put("Eq0", (java.util.function.Function<Object, Object>) (_dollar__unused_0) -> Data_Eq.eqUnit); }};

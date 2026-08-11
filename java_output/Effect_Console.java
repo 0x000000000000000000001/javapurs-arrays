@@ -3,17 +3,29 @@ public class Effect_Console {
         public Object apply(Object arg) { return this; }
     };
     public static Object clear = FFI_STUB;
+    public static Object clear(Object... args) { return null; }
     public static Object debug = FFI_STUB;
+    public static Object debug(Object... args) { return null; }
     public static Object error = FFI_STUB;
+    public static Object error(Object... args) { return null; }
     public static Object group = FFI_STUB;
+    public static Object group(Object... args) { return null; }
     public static Object groupCollapsed = FFI_STUB;
+    public static Object groupCollapsed(Object... args) { return null; }
     public static Object groupEnd = FFI_STUB;
+    public static Object groupEnd(Object... args) { return null; }
     public static Object info = FFI_STUB;
+    public static Object info(Object... args) { return null; }
     public static Object log = FFI_STUB;
+    public static Object log(Object... args) { return null; }
     public static Object time = FFI_STUB;
+    public static Object time(Object... args) { return null; }
     public static Object timeEnd = FFI_STUB;
+    public static Object timeEnd(Object... args) { return null; }
     public static Object timeLog = FFI_STUB;
+    public static Object timeLog(Object... args) { return null; }
     public static Object warn = FFI_STUB;
+    public static Object warn(Object... args) { return null; }
 
 public static final Object discard = ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) Control_Bind.discardUnit).get("discard"))).apply(Effect.bindEffect);
 public static final Object warnShow = (java.util.function.Function<Object, Object>) (dictShow_0) -> (java.util.function.Function<Object, Object>) (a_1) -> ((java.util.function.Function<Object, Object>) (Effect_Console.warn)).apply(((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictShow_0).get("show"))).apply(a_1));

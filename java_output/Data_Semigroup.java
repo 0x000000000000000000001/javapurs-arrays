@@ -3,7 +3,9 @@ public class Data_Semigroup {
         public Object apply(Object arg) { return this; }
     };
     public static Object concatArray = FFI_STUB;
+    public static Object concatArray(Object... args) { return null; }
     public static Object concatString = FFI_STUB;
+    public static Object concatString(Object... args) { return null; }
 
 public static final Object semigroupVoid = new java.util.LinkedHashMap<String, Object>() {{ put("append", (java.util.function.Function<Object, Object>) (v_0) -> Data_Void.absurd); }};
 public static final Object semigroupUnit = new java.util.LinkedHashMap<String, Object>() {{ put("append", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> Data_Unit.unit); }};

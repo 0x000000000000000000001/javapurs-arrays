@@ -3,6 +3,7 @@ public class Control_Bind {
         public Object apply(Object arg) { return this; }
     };
     public static Object arrayBind = FFI_STUB;
+    public static Object arrayBind(Object... args) { return null; }
 
 public static final Object identity = (java.util.function.Function<Object, Object>) (x_0) -> x_0;
 public static final Object discard = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("discard");

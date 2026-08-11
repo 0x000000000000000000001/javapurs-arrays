@@ -3,6 +3,7 @@ public class Data_Unfoldable1 {
         public Object apply(Object arg) { return this; }
     };
     public static Object unfoldr1ArrayImpl = FFI_STUB;
+    public static Object unfoldr1ArrayImpl(Object... args) { return null; }
 
 public static final Object fromJust = (java.util.function.Function<Object, Object>) (v_0) -> ( ((Boolean) ((v_0 instanceof Data_Maybe.Just))) ? (((Data_Maybe.Just) v_0).value0) : ((java.util.function.Supplier<Object>) () -> { throw new RuntimeException("Failed pattern match"); }).get());
 public static final Object lessThanOrEq = ((new java.util.function.Supplier<Object>() { Object __local_var_0 = ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (Data_Ord.ordIntImpl)).apply(new Data_Ordering.LT()))).apply(new Data_Ordering.EQ()))).apply(new Data_Ordering.GT()); public Object get() { return (java.util.function.Function<Object, Object>) (a1_1) -> (java.util.function.Function<Object, Object>) (a2_2) -> ( ((Boolean) ((((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (__local_var_0)).apply(a1_1))).apply(a2_2) instanceof Data_Ordering.GT))) ? false : true); } })).get();

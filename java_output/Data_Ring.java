@@ -3,7 +3,9 @@ public class Data_Ring {
         public Object apply(Object arg) { return this; }
     };
     public static Object intSub = FFI_STUB;
+    public static Object intSub(Object... args) { return null; }
     public static Object numSub = FFI_STUB;
+    public static Object numSub(Object... args) { return null; }
 
 public static final Object subRecord = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("subRecord");
 public static final Object sub = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("sub");

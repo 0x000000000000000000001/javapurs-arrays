@@ -3,6 +3,7 @@ public class Control_Extend {
         public Object apply(Object arg) { return this; }
     };
     public static Object arrayExtend = FFI_STUB;
+    public static Object arrayExtend(Object... args) { return null; }
 
 public static final Object identity = (java.util.function.Function<Object, Object>) (x_0) -> x_0;
 public static final Object extendFn = (java.util.function.Function<Object, Object>) (dictSemigroup_0) -> new java.util.LinkedHashMap<String, Object>() {{ put("extend", (java.util.function.Function<Object, Object>) (f_1) -> (java.util.function.Function<Object, Object>) (g_2) -> (java.util.function.Function<Object, Object>) (w_3) -> ((java.util.function.Function<Object, Object>) (f_1)).apply((java.util.function.Function<Object, Object>) (w_prime_4) -> ((java.util.function.Function<Object, Object>) (g_2)).apply(((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictSemigroup_0).get("append"))).apply(w_3))).apply(w_prime_4)))); put("Functor0", (java.util.function.Function<Object, Object>) (_dollar__unused_1) -> Data_Functor.functorFn); }};

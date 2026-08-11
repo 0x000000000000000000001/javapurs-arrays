@@ -3,7 +3,9 @@ public class Data_Foldable {
         public Object apply(Object arg) { return this; }
     };
     public static Object foldlArray = FFI_STUB;
+    public static Object foldlArray(Object... args) { return null; }
     public static Object foldrArray = FFI_STUB;
+    public static Object foldrArray(Object... args) { return null; }
 
 public static final class Empty {
             

@@ -3,6 +3,7 @@ public class Data_Functor {
         public Object apply(Object arg) { return this; }
     };
     public static Object arrayMap = FFI_STUB;
+    public static Object arrayMap(Object... args) { return null; }
 
 public static final Object map = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("map");
 public static final Object mapFlipped = (java.util.function.Function<Object, Object>) (dictFunctor_0) -> (java.util.function.Function<Object, Object>) (fa_1) -> (java.util.function.Function<Object, Object>) (f_2) -> ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctor_0).get("map"))).apply(f_2))).apply(fa_1);

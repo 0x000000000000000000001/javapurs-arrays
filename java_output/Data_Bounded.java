@@ -3,11 +3,17 @@ public class Data_Bounded {
         public Object apply(Object arg) { return this; }
     };
     public static Object bottomChar = FFI_STUB;
+    public static Object bottomChar(Object... args) { return null; }
     public static Object bottomInt = FFI_STUB;
+    public static Object bottomInt(Object... args) { return null; }
     public static Object bottomNumber = FFI_STUB;
+    public static Object bottomNumber(Object... args) { return null; }
     public static Object topChar = FFI_STUB;
+    public static Object topChar(Object... args) { return null; }
     public static Object topInt = FFI_STUB;
+    public static Object topInt(Object... args) { return null; }
     public static Object topNumber = FFI_STUB;
+    public static Object topNumber(Object... args) { return null; }
 
 public static final Object topRecord = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("topRecord");
 public static final Object top = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("top");

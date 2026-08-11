@@ -3,9 +3,13 @@ public class Data_Number_Format {
         public Object apply(Object arg) { return this; }
     };
     public static Object toExponentialNative = FFI_STUB;
+    public static Object toExponentialNative(Object... args) { return null; }
     public static Object toFixedNative = FFI_STUB;
+    public static Object toFixedNative(Object... args) { return null; }
     public static Object toPrecisionNative = FFI_STUB;
+    public static Object toPrecisionNative(Object... args) { return null; }
     public static Object toString = FFI_STUB;
+    public static Object toString(Object... args) { return null; }
 
 public static final class Precision {
             public final Object value0;

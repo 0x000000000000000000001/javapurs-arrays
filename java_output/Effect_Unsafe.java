@@ -3,6 +3,7 @@ public class Effect_Unsafe {
         public Object apply(Object arg) { return this; }
     };
     public static Object unsafePerformEffect = FFI_STUB;
+    public static Object unsafePerformEffect(Object... args) { return null; }
 
 
 }

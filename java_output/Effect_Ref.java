@@ -3,10 +3,15 @@ public class Effect_Ref {
         public Object apply(Object arg) { return this; }
     };
     public static Object _new = FFI_STUB;
+    public static Object _new(Object... args) { return null; }
     public static Object modifyImpl = FFI_STUB;
+    public static Object modifyImpl(Object... args) { return null; }
     public static Object newWithSelf = FFI_STUB;
+    public static Object newWithSelf(Object... args) { return null; }
     public static Object read = FFI_STUB;
+    public static Object read(Object... args) { return null; }
     public static Object write = FFI_STUB;
+    public static Object write(Object... args) { return null; }
 
 public static final Object $void = ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) Effect.functorEffect).get("map"))).apply((java.util.function.Function<Object, Object>) (v_0) -> Data_Unit.unit);
 public static final Object $new = Effect_Ref._new;

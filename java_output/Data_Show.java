@@ -3,10 +3,15 @@ public class Data_Show {
         public Object apply(Object arg) { return this; }
     };
     public static Object showArrayImpl = FFI_STUB;
+    public static Object showArrayImpl(Object... args) { return null; }
     public static Object showCharImpl = FFI_STUB;
+    public static Object showCharImpl(Object... args) { return null; }
     public static Object showIntImpl = FFI_STUB;
+    public static Object showIntImpl(Object... args) { return null; }
     public static Object showNumberImpl = FFI_STUB;
+    public static Object showNumberImpl(Object... args) { return null; }
     public static Object showStringImpl = FFI_STUB;
+    public static Object showStringImpl(Object... args) { return null; }
 
 public static final Object showVoid = new java.util.LinkedHashMap<String, Object>() {{ put("show", Data_Void.absurd); }};
 public static final Object showUnit = new java.util.LinkedHashMap<String, Object>() {{ put("show", (java.util.function.Function<Object, Object>) (v_0) -> "unit"); }};

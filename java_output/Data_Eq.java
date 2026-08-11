@@ -2,12 +2,23 @@ public class Data_Eq {
     public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
         public Object apply(Object arg) { return this; }
     };
-    public static Object eqArrayImpl = FFI_STUB;
-    public static Object eqBooleanImpl = FFI_STUB;
-    public static Object eqCharImpl = FFI_STUB;
-    public static Object eqIntImpl = FFI_STUB;
-    public static Object eqNumberImpl = FFI_STUB;
-    public static Object eqStringImpl = FFI_STUB;
+    // FFI provided by ../javapurs-prelude/src/Data/Eq.java
+    public static Object eqBooleanImpl = (java.util.function.Function<Object, Object>) (a) -> (java.util.function.Function<Object, Object>) (b) -> ((Boolean) a).equals((Boolean) b);
+    public static Object eqIntImpl = (java.util.function.Function<Object, Object>) (a) -> (java.util.function.Function<Object, Object>) (b) -> ((Integer) a).equals((Integer) b);
+    public static Object eqStringImpl = (java.util.function.Function<Object, Object>) (a) -> (java.util.function.Function<Object, Object>) (b) -> ((String) a).equals((String) b);
+    public static Object eqCharImpl = (java.util.function.Function<Object, Object>) (a) -> (java.util.function.Function<Object, Object>) (b) -> ((Character) a).equals((Character) b);
+    public static Object eqNumberImpl = (java.util.function.Function<Object, Object>) (a) -> (java.util.function.Function<Object, Object>) (b) -> ((Double) a).equals((Double) b);
+    public static Object eqArrayImpl = (java.util.function.Function<Object, Object>) (f) -> (java.util.function.Function<Object, Object>) (xs) -> (java.util.function.Function<Object, Object>) (ys) -> {
+        Object[] arr1 = (Object[]) xs;
+        Object[] arr2 = (Object[]) ys;
+        if (arr1.length != arr2.length) return false;
+        for (int i = 0; i < arr1.length; i++) {
+            Boolean res = (Boolean) ((java.util.function.Function<Object, Object>) ((java.util.function.Function<Object, Object>) f).apply(arr1[i])).apply(arr2[i]);
+            if (!res) return false;
+        }
+        return true;
+    };
+
 
 public static final Object eqVoid = new java.util.LinkedHashMap<String, Object>() {{ put("eq", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> true); }};
 public static final Object eqUnit = new java.util.LinkedHashMap<String, Object>() {{ put("eq", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> true); }};

@@ -3,6 +3,7 @@ public class Data_Reflectable {
         public Object apply(Object arg) { return this; }
     };
     public static Object unsafeCoerce = FFI_STUB;
+    public static Object unsafeCoerce(Object... args) { return null; }
 
 public static final Object reifiableString = new java.util.LinkedHashMap<String, Object>() {{ }};
 public static final Object reifiableOrdering = new java.util.LinkedHashMap<String, Object>() {{ }};

@@ -3,6 +3,7 @@ public class Unsafe_Coerce {
         public Object apply(Object arg) { return this; }
     };
     public static Object unsafeCoerce = FFI_STUB;
+    public static Object unsafeCoerce(Object... args) { return null; }
 
 
 }

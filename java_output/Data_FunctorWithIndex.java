@@ -3,6 +3,7 @@ public class Data_FunctorWithIndex {
         public Object apply(Object arg) { return this; }
     };
     public static Object mapWithIndexArray = FFI_STUB;
+    public static Object mapWithIndexArray(Object... args) { return null; }
 
 public static final Object mapWithIndex = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("mapWithIndex");
 public static final Object mapDefault = (java.util.function.Function<Object, Object>) (dictFunctorWithIndex_0) -> (java.util.function.Function<Object, Object>) (f_1) -> ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctorWithIndex_0).get("mapWithIndex"))).apply((java.util.function.Function<Object, Object>) (v_2) -> f_1);

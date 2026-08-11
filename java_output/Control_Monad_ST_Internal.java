@@ -3,16 +3,27 @@ public class Control_Monad_ST_Internal {
         public Object apply(Object arg) { return this; }
     };
     public static Object bind_ = FFI_STUB;
+    public static Object bind_(Object... args) { return null; }
     public static Object $for = FFI_STUB;
+    public static Object $for(Object... args) { return null; }
     public static Object foreach = FFI_STUB;
+    public static Object foreach(Object... args) { return null; }
     public static Object map_ = FFI_STUB;
+    public static Object map_(Object... args) { return null; }
     public static Object modifyImpl = FFI_STUB;
+    public static Object modifyImpl(Object... args) { return null; }
     public static Object $new = FFI_STUB;
+    public static Object $new(Object... args) { return null; }
     public static Object pure_ = FFI_STUB;
+    public static Object pure_(Object... args) { return null; }
     public static Object read = FFI_STUB;
+    public static Object read(Object... args) { return null; }
     public static Object run = FFI_STUB;
+    public static Object run(Object... args) { return null; }
     public static Object $while = FFI_STUB;
+    public static Object $while(Object... args) { return null; }
     public static Object write = FFI_STUB;
+    public static Object write(Object... args) { return null; }
 
 public static final Object modifyprime = Control_Monad_ST_Internal.modifyImpl;
 public static final Object modify = (java.util.function.Function<Object, Object>) (f_0) -> ((java.util.function.Function<Object, Object>) (Control_Monad_ST_Internal.modifyImpl)).apply((java.util.function.Function<Object, Object>) (s_1) -> ((new java.util.function.Supplier<Object>() { Object s_prime_2 = ((java.util.function.Function<Object, Object>) (f_0)).apply(s_1); public Object get() { return new java.util.LinkedHashMap<String, Object>() {{ put("state", s_prime_2); put("value", s_prime_2); }}; } })).get());

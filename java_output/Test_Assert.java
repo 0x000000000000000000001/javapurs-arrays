@@ -3,7 +3,9 @@ public class Test_Assert {
         public Object apply(Object arg) { return this; }
     };
     public static Object assertImpl = FFI_STUB;
+    public static Object assertImpl(Object... args) { return null; }
     public static Object checkThrows = FFI_STUB;
+    public static Object checkThrows(Object... args) { return null; }
 
 public static final Object discard = ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) Control_Bind.discardUnit).get("discard"))).apply(Effect.bindEffect);
 public static final Object assertprime = (java.util.function.Function<Object, Object>) (msg) -> (java.util.function.Function<Object, Object>) (b) -> (java.util.function.Supplier<Object>) () -> { if (!((Boolean) b)) { throw new RuntimeException((String) msg); } return null; };
