@@ -1,7 +1,20 @@
     public static Object fromFoldableImpl = FFI_STUB;
     public static Object fromFoldableImpl(Object... args) { return null; }
-    public static Object rangeImpl = FFI_STUB;
-    public static Object rangeImpl(Object... args) { return null; }
+    public static Object rangeImpl = (java.util.function.Function<Object, Object>) (start_obj) -> (java.util.function.Function<Object, Object>) (end_obj) -> {
+        int start = ((Number) start_obj).intValue();
+        int end = ((Number) end_obj).intValue();
+        int step = start > end ? -1 : 1;
+        int len = step > 0 ? end - start + 1 : start - end + 1;
+        Object[] result = new Object[len];
+        int i = start;
+        int n = 0;
+        while (i != end) {
+            result[n++] = i;
+            i += step;
+        }
+        result[n] = i;
+        return result;
+    };
     public static Object replicateImpl = FFI_STUB;
     public static Object replicateImpl(Object... args) { return null; }
     public static Object length = (java.util.function.Function<Object, Object>) (xs) -> {
@@ -43,8 +56,16 @@
     public static Object reverse(Object... args) { return null; }
     public static Object concat = FFI_STUB;
     public static Object concat(Object... args) { return null; }
-    public static Object filterImpl = FFI_STUB;
-    public static Object filterImpl(Object... args) { return null; }
+    public static Object filterImpl = (java.util.function.Function<Object, Object>) (f) -> (java.util.function.Function<Object, Object>) (xs) -> {
+        Object[] arr = (Object[]) xs;
+        java.util.List<Object> res = new java.util.ArrayList<>();
+        for (Object x : arr) {
+            if ((Boolean) ((java.util.function.Function<Object, Object>) f).apply(x)) {
+                res.add(x);
+            }
+        }
+        return res.toArray(new Object[0]);
+    };
     public static Object partitionImpl = FFI_STUB;
     public static Object partitionImpl(Object... args) { return null; }
     public static Object scanlImpl = FFI_STUB;
