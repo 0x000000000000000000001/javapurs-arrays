@@ -1,17 +1,25 @@
     // Port of Data/Array.js. Arrays are Object[] in this backend.
+    private static final class __ArrayCons {
+        final Object head;
+        final Object tail;
+        __ArrayCons(Object head, Object tail) { this.head = head; this.tail = tail; }
+    }
+
     public static Object fromFoldableImpl = (java.util.function.Function<Object, Object>) (foldr) ->
         (java.util.function.Function<Object, Object>) (xs) -> {
             Object emptyList = new Object();
             java.util.function.Function<Object, Object> curryCons = head ->
-                (java.util.function.Function<Object, Object>) tail -> {
-                    java.util.ArrayList<Object> list = new java.util.ArrayList<>();
-                    list.add(head);
-                    list.addAll((java.util.List<Object>) tail);
-                    return list;
-                };
-            java.util.List<Object> list = (java.util.List<Object>) ((java.util.function.Function<Object, Object>) ((java.util.function.Function<Object, Object>) ((java.util.function.Function<Object, Object>) foldr)
+                (java.util.function.Function<Object, Object>) tail -> new __ArrayCons(head, tail);
+            Object list = ((java.util.function.Function<Object, Object>) ((java.util.function.Function<Object, Object>) ((java.util.function.Function<Object, Object>) foldr)
                 .apply(curryCons)).apply(emptyList)).apply(xs);
-            return list.toArray(new Object[0]);
+            java.util.List<Object> out = new java.util.ArrayList<>();
+            Object current = list;
+            while (current != emptyList) {
+                __ArrayCons cons = (__ArrayCons) current;
+                out.add(cons.head);
+                current = cons.tail;
+            }
+            return out.toArray(new Object[0]);
         };
 
     public static Object rangeImpl = (java.util.function.Function<Object, Object>) (start_obj) -> (java.util.function.Function<Object, Object>) (end_obj) -> {
